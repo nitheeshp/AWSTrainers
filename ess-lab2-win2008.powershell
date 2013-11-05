@@ -6,15 +6,15 @@ cinst vcredist2010
 cinst mysql.workbench
 # Enable IIS
 $packages = "IIS-WebServerRole;" +
-"IIS-WebServer;" +
-"IIS-CommonHttpFeatures;" +
-"IIS-StaticContent;" +
-"IIS-DefaultDocument;" +
+    "IIS-WebServer;" +
+    "IIS-CommonHttpFeatures;" +
+    "IIS-StaticContent;" +
+    "IIS-DefaultDocument;" +
 "IIS-ManagementConsole;" +
-"IIS-ManagementService;" +
-"IIS-LegacySnapIn;" +
-"WAS-NetFxEnvironment;" +
-"WAS-ConfigurationAPI"
-Start-Process "pkgmgr" "/iu:$packages"
+    "IIS-ManagementService;" +
+    "IIS-LegacySnapIn;" +
+    "WAS-NetFxEnvironment;" +
+    "WAS-ConfigurationAPI"
+ Start-Process "pkgmgr" "/iu:$packages"
 (servermanagercmd -install Web-Server -restart)
 </powershell>
